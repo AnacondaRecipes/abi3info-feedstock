@@ -1,5 +1,5 @@
 {% set name = "abi3info" %}
-{% set version = "2025.11.29" %}
+{% set version = "2026.09.25" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/woodruffw/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 588d4f869b63766e1583ab55acc886297de23ef8328717a1d93dd971aa7425b0
+  sha256: 65e7587ca3f58055061b359fec7481e92ad87e8ff3025c188b88ce8473145191
 
 build:
-  skip: true # [py<310]
+  skip: true  # [py<310]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
